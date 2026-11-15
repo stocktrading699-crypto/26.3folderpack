@@ -10,12 +10,12 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 26
+          java-version: 25
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.12"
+          gradle-version: "9.6.0"
       - run: gradle build --no-daemon
       - uses: actions/upload-artifact@v4
         with:
-          name: DonutAlerts-jar
-          path: build/libs/donutalerts-26.3.jar
+          name: DonutAlerts-26.3-jar
+          path: build/libs/donutalerts-1.0.0.jar
